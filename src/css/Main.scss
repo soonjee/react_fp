@@ -1,0 +1,7 @@
+.Main {
+    @for $i from 1 through 3 {
+        .itm0#{$i} {
+            background: url(../../public/assets/img/mainvisual_0#{$i}.png)no-repeat center center/cover;
+        }
+    }
+}

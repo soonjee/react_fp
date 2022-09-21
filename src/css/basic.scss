@@ -1,0 +1,62 @@
+$main-color: #014498;
+$color-tit: #222;
+$color-sub: #666;
+$color-white : #fff;
+$font-small : 16px;
+$font-midume : 18px;
+$font-big : 24px;
+
+* {
+    outline: 1px solid #f00;
+}
+
+
+.Header {
+    padding: 0 50px;
+
+    .container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between
+    }
+
+    .logo {
+        width: 204px;
+        height: 43px;
+        background: url(../../public/assets/img/logo_on.png);
+        //background: url(../../public/assets/img/logo.png);
+    }
+
+    ul {
+        display: flex;
+        gap: 50px;
+        line-height: 90px;
+        font-size: $font-midume;
+        font-weight: 500;
+        //color: $color-white;
+    }
+
+    i {
+        font-size: 41px;
+        //color: $color-white;
+    }
+}
+
+.tit {
+    font-size: 40px;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+    font-size: $color-tit;
+    border-bottom: 1px solid #222;
+    margin-bottom: 30px;
+}
+
+.sub {
+    font-size: 40px;
+    font-size: 1.7rem;
+    text-align: center;
+    color: $color-sub;
+    border-bottom: 1px solid #222;
+    margin-bottom: 60px;
+}
