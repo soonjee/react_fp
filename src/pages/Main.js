@@ -1,5 +1,4 @@
 import React from 'react';
-import '../css/Main.scss';
 import MainBusiness from './MainBusiness';
 import MainInfo from './MainInfo';
 import MainPerformance from './MainPerformance';

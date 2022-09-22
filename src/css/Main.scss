@@ -1,7 +1,38 @@
-.Main {
-    @for $i from 1 through 3 {
-        .itm0#{$i} {
-            background: url(../../public/assets/img/mainvisual_0#{$i}.png)no-repeat center center/cover;
-        }
-    }
+.MainBusiness {
+    position: relative;
+}
+
+.MainBusiness figure {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+
+.MainBusiness .itm01 {
+    background-image: url(../../public/assets/img/mainvisual_01.jpg);
+}
+
+.MainBusiness .itm02 {
+    background-image: url(../../public/assets/img/mainvisual_02.jpg);
+}
+
+.MainBusiness .itm03 {
+    background-image: url(../../public/assets/img/mainvisual_03.jpg);
+}
+
+// 메인비주얼 슬로건
+.MainBusiness .Main_typo {
+    position: absolute;
+    background: #ff0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+// 메인 컨트롤 영역
+
+.MainControl {
+    background: #ff0;
 }

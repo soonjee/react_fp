@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route, Routes } from 'react-router-dom';
 import Wrapper from './pages/Wrapper';
 import Header from './pages/Header';
 import Main from './pages/Main';
@@ -9,7 +10,6 @@ import Sub04 from './pages/Sub04';
 import Sub05 from './pages/Sub05';
 import Sub06 from './pages/Sub06';
 import Footer from './pages/Footer';
-import { Route, Routes } from 'react-router-dom';
 import './css/basic.scss';
 
 const App = () => {

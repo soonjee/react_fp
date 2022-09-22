@@ -10,21 +10,28 @@ $font-big : 24px;
     outline: 1px solid #f00;
 }
 
-
 .Header {
+    position: fixed;
+    width: 100%;
     padding: 0 50px;
+    z-index: 999;
+
+    &:hover {
+        background: $color-white;
+        transition: 0.3s;
+    }
 
     .container {
         display: flex;
         align-items: center;
-        justify-content: space-between
+        justify-content: space-between;
+        color: $color-white;
     }
 
     .logo {
         width: 204px;
         height: 43px;
-        background: url(../../public/assets/img/logo_on.png);
-        //background: url(../../public/assets/img/logo.png);
+        background: url(../../public/assets/img/logo.png);
     }
 
     ul {
@@ -33,13 +40,21 @@ $font-big : 24px;
         line-height: 90px;
         font-size: $font-midume;
         font-weight: 500;
-        //color: $color-white;
+        // color: $color-white;
     }
 
     i {
         font-size: 41px;
-        //color: $color-white;
+        // color: $color-white;
     }
+}
+
+.Header:hover .container {
+    color: $color-tit;
+}
+
+.Header:hover .logo {
+    background: url(../../public/assets/img/logo02.png);
 }
 
 .tit {
