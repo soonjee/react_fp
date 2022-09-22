@@ -22,7 +22,7 @@ const MainBusiness = () => {
         autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true,
+        // dots: true,
         arrows: false,
     }
     return (
@@ -43,7 +43,7 @@ const MainBusiness = () => {
                     }
                 </Slider>
             </div>
-            <div className="MainControl">
+            {/* <div className="MainControl">
                 <div className="Main_arrows_wrap">
                     <figure>
                         <img src={process.env.PUBLIC_URL + "/public/assets/img/main_arrow_prev.png"} alt="" />
@@ -65,7 +65,7 @@ const MainBusiness = () => {
                         <img src={process.env.PUBLIC_URL + "/public/assets/img/main_pause.png"} alt="" />
                     </button>
                 </div>
-            </div>
+            </div> */}
         </section >
     )
 }

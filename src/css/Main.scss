@@ -1,3 +1,14 @@
+//공통
+.inner {
+    width: 100%;
+    max-width: 1480px;
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+
+
+// MainBusiness, 메인비주얼 scss
 .MainBusiness {
     position: relative;
 }
@@ -22,17 +33,37 @@
 }
 
 // 메인비주얼 슬로건
-.MainBusiness .Main_typo {
-    position: absolute;
-    background: #ff0;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+// .MainBusiness .Main_typo {
+//     position: absolute;
+//     background: #ff0;
+//     top: 50%;
+//     left: 50%;
+//     transform: translate(-50%, -50%);
+// }
+
+
+// // 메인 컨트롤 영역
+
+// .MainControl {
+//     background: #ff0;
+// }
+
+// MainInfo, 섹션01 scss
+.MainInfo {
+    position: relative;
+    padding: 100px 0 0 0;
+    // background: #ff0;
 }
 
-
-// 메인 컨트롤 영역
-
-.MainControl {
-    background: #ff0;
+.MainInfo::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    max-width: 369px;
+    height: 681px;
+    left: 30px;
+    top: -50px;
+    background: url(../../public/assets/img/line_bg.png) no-repeat center center;
+    z-index: -1;
+    opacity: .5;
 }

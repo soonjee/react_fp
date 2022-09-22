@@ -58,6 +58,7 @@ $font-big : 24px;
 }
 
 .tit {
+    display: inline-block;
     font-size: 40px;
     font-weight: 600;
     text-align: center;
@@ -68,10 +69,8 @@ $font-big : 24px;
 }
 
 .sub {
-    font-size: 40px;
-    font-size: 1.7rem;
+    font-size: 17px;
     text-align: center;
-    color: $color-sub;
-    border-bottom: 1px solid #222;
+    color: #666;
     margin-bottom: 60px;
 }
