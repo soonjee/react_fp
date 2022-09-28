@@ -10,6 +10,13 @@ $font-big : 24px;
     // outline: 1px solid #f00;
 }
 
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+}
+
 .Header {
     position: fixed;
     width: 100%;

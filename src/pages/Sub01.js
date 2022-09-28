@@ -1,11 +1,11 @@
 import React from 'react';
 import '../css/Sub.scss';
 
-const Sub01 = () => {
+const Sub01 = ({ content }) => {
     return (
-        <section className='Sub01 sb'>
+        <div className='Subpage'>
 
-        </section>
+        </div>
     )
 }
 
