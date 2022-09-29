@@ -1,5 +1,5 @@
 $main-color: #014498;
-$color-tit: #222;
+$color-tit: #333;
 $color-sub: #666;
 $color-white : #fff;
 $font-small : 16px;
@@ -8,6 +8,7 @@ $font-big : 24px;
 
 * {
     // outline: 1px solid #f00;
+    font-family: Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
 }
 
 .container {

@@ -1,14 +1,89 @@
-.sb {}
+.Subpage {
+    .itm {
+        position: relative;
+        height: 500px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
 
+    .itm01 {
+        background-image: url(../../public/assets/img/sub_visual_01_new.jpg);
+    }
 
-&.itm01 {
-    background-image: url('../../public/assets/img/main_m01.jpg');
-}
+    .itm02 {
+        background-image: url(../../public/assets/img/sub_visual_02_new.jpg);
+    }
 
-&.itm02 {
-    background-image: url('../../public/assets/img/main_m02.jpg');
-}
+    .itm03 {
+        background-image: url(../../public/assets/img/sub_visual_03_new.jpg);
+    }
 
-&.itm03 {
-    background-image: url('../../public/assets/img/main_m03.jpg');
+    .itm04 {
+        background-image: url(../../public/assets/img/sub_visual_04_new.jpg);
+    }
+
+    .itm05 {
+        background-image: url(../../public/assets/img/sub_visual_05_new.jpg);
+    }
+
+    .itm06 {
+        background-image: url(../../public/assets/img/sub_visual_06_new.jpg);
+    }
+
+    .Article {
+        .container {
+            padding-top: 200px;
+            color: #fff;
+
+            .sub_t {
+                margin-bottom: 50px;
+
+                .sub_atc_sub {
+                    font-size: 16;
+                    font-weight: 300;
+                    opacity: 0.5;
+                    margin-bottom: 20px;
+                }
+
+                .sub_atc_tit {
+                    font-size: 58px;
+                    font-weight: 500;
+                    letter-spacing: -0.04em;
+                }
+            }
+
+            .sub_nav {
+                ul {
+                    display: flex;
+                    justify-content: flex-end;
+                    text-align: center;
+                    gap: 20px;
+
+                    li~li::before {
+                        content: "";
+                        display: inline-block;
+                        width: 1px;
+                        height: 13px;
+                        margin-right: 20px;
+                        background: #fff;
+                    }
+
+                    .suv_nav_01 {
+                        font-size: 18px;
+                    }
+
+                    .suv_nav_02 {
+                        font-size: 16px;
+                    }
+
+                    .suv_nav_03 {
+                        font-size: 20px;
+                        padding: 0 0 10px 0;
+                        // border-bottom: 2px solid #fff;
+                    }
+                }
+            }
+        }
+    }
 }

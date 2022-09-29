@@ -1,16 +1,23 @@
 import React from 'react';
-import '../css/Subpage.scss';
+import { IoMdHome } from "react-icons/io";
 
-const Article = () => {
+const Article = ({ content, num, }) => {
     return (
         <div className='Article'>
             <div className="container">
-                <figure className={`itm itm0$`}>
-                </figure>
-                밑에다가 넣기!!!
-
+                <div className="sub_t">
+                    <p className='sub_atc_sub'>{content[num].subt}</p>
+                    <h2 className='sub_atc_tit'>{content[num].tit}</h2>
+                </div>
+                <div className="sub_nav">
+                    <ul>
+                        <li className='suv_nav_01'><a href=""><IoMdHome /></a></li>
+                        <li className='suv_nav_02'><a href="">{content[num].ctg}</a></li>
+                        <li className='suv_nav_03'>{content[num].tit}</li>
+                    </ul>
+                </div>
             </div>
-        </div>
+        </div >
     )
 }
 
