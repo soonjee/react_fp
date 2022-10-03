@@ -1,72 +1,44 @@
-import React, { useEffect, useRef, useState } from 'react'
-import Slider from 'react-slick';
-import "slick-carousel/slick/slick.css";
-import '../css/Main.scss';
+import React from 'react';
 
-
-const SLIDE = [
-    { id: 1, title: "HOUSING", des: "삶의 안락함과 여유를 갖춘 진정한 보금자리" },
-    { id: 2, title: "HOUSING", des: "삶의 안락함과 여유를 갖춘 진정한 보금자리" },
-    { id: 3, title: "HOUSING", des: "삶의 안락함과 여유를 갖춘 진정한 보금자리" }
+const BUSINESS = [
+    {id:1, Field:"건축 분야", sub:"Housing Works", btn:"자세히 보기", link:"/"},
+    {id:2, Field:"공공 분야", sub:"Architecture Works", btn:"자세히 보기", link:"/"},
+    {id:3, Field:"레저 분야", sub:"Leisure Works", btn:"자세히 보기", link:"/"},
+    {id:4, Field:"토목 분야", sub:"Development Works", btn:"자세히 보기", link:"/"},
 ]
 
 const MainBusiness = () => {
-    const [IDX, setIDX] = useState();
-    useEffect(() => {
-        setIDX(0)
-    }, []);
-    const mainSlide = useRef(null);
-    const setting = {
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 3000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        // dots: true,
-        arrows: false,
-    }
     return (
-        <section className='Main'>
-            <div className="MainBusiness">
-                <Slider {...setting} ref={mainSlide}>
-                    {
-                        SLIDE.map((slide, idx) => {
+        <section className='MainBusiness sc'>
+            <div className='inner'>
+                <h2 className='tit'>사업소개</h2>
+                <p className='sub'>고객을 위한 가치 창조, 고객의 최대 감동을 위해 최선의 노력을 다하겠습니다.</p>
+                <ul className='MB_list'>
+                        { BUSINESS.map((business, idx) => {
                             return (
-                                <figure key={slide.id} className={'itm0' + slide.id + (idx === IDX ? ' on' : '')}>
-                                    <div className='Main_typo'>
-                                        <p className='typo_tit'>{slide.title}</p>
-                                        <strong className='typo_des'>{slide.des}</strong>
-                                    </div>
-                                </figure>
-                            )
-                        })
-                    }
-                </Slider>
+                                <li className='MB_itm'>
+                                    <a className='MB_box'>
+                                        <div className='info_icon'>
+                                            {/* <figure key={business.id} className={'itm0'+ business.id}>
+                                                <img alt={process.env.PUBLIC_URL + "../../public/assets/img/main_business_icon_0$" + ".png"}></img>
+                                            </figure> */}
+                                        </div>
+                                        <p className='MB_fd'>{business.Field}</p>
+                                        <p className='MB_sub'>{business.sub}</p>
+                                        <div className='MB_go'>
+                                            <a href={business.btn} target="_blank" className='MB_btn'>
+                                                자세히 보기<img src={process.env.PUBLIC_URL + "../../public/assets/img/ic_plus.png"} alt="" />
+                                            </a>
+                                        </div>
+                                    
+                                    </a>
+                                </li>
+                            )}) 
+                        }
+                </ul>
+            
             </div>
-            {/* <div className="MainControl">
-                <div className="Main_arrows_wrap">
-                    <figure>
-                        <img src={process.env.PUBLIC_URL + "/public/assets/img/main_arrow_prev.png"} alt="" />
-                    </figure>
-                    <figure>
-                        <img src={process.env.PUBLIC_URL + "/public/assets/img/main_arrow_next.png"} alt="" />
-                    </figure>
-                </div>
-                <div className="Main_Counter">
-                    <span className='counter__num-current'>1</span>
-                    " / "
-                    <span className='counter__num-total'>4</span>
-                </div>
-                <div className="Main_paly">
-                    <button className='play__bt-play'>
-                        <img src={process.env.PUBLIC_URL + "/public/assets/img/main_play.png"} alt="" />
-                    </button>
-                    <button className='play__bt-pause'>
-                        <img src={process.env.PUBLIC_URL + "/public/assets/img/main_pause.png"} alt="" />
-                    </button>
-                </div>
-            </div> */}
-        </section >
+        </section>  
     )
 }
 

@@ -6,34 +6,38 @@
     align-items: center;
     text-align: center;
 }
+.sc {
+    position: relative;
+    padding: 100px 0 0 0;
+}
 
 
-// MainBusiness, 메인비주얼 scss
-.MainBusiness {
+// MainVisual, 메인비주얼 scss
+.MainVisual {
     position: relative;
 }
 
-.MainBusiness figure {
+.MainVisual figure {
     height: 100vh;
     background-repeat: no-repeat;
     background-position: center center;
 }
 
 
-.MainBusiness .itm01 {
+.MainVisual .itm01 {
     background-image: url(../../public/assets/img/mainvisual_01.jpg);
 }
 
-.MainBusiness .itm02 {
+.MainVisual .itm02 {
     background-image: url(../../public/assets/img/mainvisual_02.jpg);
 }
 
-.MainBusiness .itm03 {
+.MainVisual .itm03 {
     background-image: url(../../public/assets/img/mainvisual_03.jpg);
 }
 
 // 메인비주얼 슬로건
-// .MainBusiness .Main_typo {
+// .MainVisual .Main_typo {
 //     position: absolute;
 //     background: #ff0;
 //     top: 50%;
@@ -42,28 +46,217 @@
 // }
 
 
-// // 메인 컨트롤 영역
+// MainBusiness, 섹션01 scss
+.MainBusiness {
 
-// .MainControl {
-//     background: #ff0;
-// }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        max-width: 369px;
+        height: 681px;
+        left: 30px;
+        top: -50px;
+        background: url(../../public/assets/img/line_bg.png) no-repeat center center;
+        z-index: -1;
+        opacity: 0.5;
+    }
 
-// MainInfo, 섹션01 scss
+    .MB_list {
+        position: relative;
+        display: flex;
+        height: 500px;
+        background: url(../../public/assets/img/business_bg_00.png);
+
+
+        .MB_itm {
+            width: 25%;
+            height: 100%;
+            color: #fff;
+
+            .MB_box {
+                position: absolute;
+                top: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            .MB_fd {
+                font-size: 24px;
+                margin-bottom: 10px;
+            }
+
+            .MB_sub {
+                font-size: 16px;
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+// MainInfo 섹션
 .MainInfo {
-    position: relative;
-    padding: 100px 0 0 0;
-    // background: #ff0;
+    
+    .MainInfo_Slider {
+        width: 100%;
+        max-width: 1480px;
+        margin: 0 auto;
+        // padding: 10px 0;
+
+        &::before {
+            content: "";
+            background: url(../../public/assets/img/info_slider_bg.png) no-repeat center center / cover;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 50%;
+            border-left: 100px solid #fff;        
+        }
+        // 슬라이드 중앙 맞추기, 간격 줄이기, dots 만들기
+
+        .MI_top {
+            position: relative;
+            width: 374px;
+            height: 275px;
+
+            .MI_state {
+                position: absolute;
+                display: flex;
+                top: 0;
+                right: 0;
+                width: 70px;
+                height: 70px;
+                
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                background: #6833a2;
+            }
+        }
+    
+        .MI_bt {
+            width: 374px;
+            height: 275px;
+            padding: 50px 30px;
+            margin-bottom: 20px;
+            background: #fff;
+            box-shadow: 10px 10px 10px rgb(0 0 0 / 10%);
+
+            .MI_tit {
+                font-size: 24px;
+                font-weight: 500;
+                color: #222;
+                text-align: left;
+                margin-bottom: 20px;
+            }
+
+            .MI_des {
+                font-size: 15px;
+                color: #707070;
+                text-align: left;
+                line-height: 26px;
+                margin-bottom: 40px;
+            }
+
+            .MI_go {
+        
+                a {
+                    display: block;
+                    padding: 12px 0;
+                    font-size: 16px;
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+    }
 }
 
-.MainInfo::before {
-    content: '';
-    position: absolute;
-    width: 100%;
-    max-width: 369px;
-    height: 681px;
-    left: 30px;
-    top: -50px;
-    background: url(../../public/assets/img/line_bg.png) no-repeat center center;
-    z-index: -1;
-    opacity: .5;
+.MainInfo figure {
+    width: 374px;
+    height: 275px;
+    // object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
+
+.MainInfo .itm01 {
+    background-image: url(../../public/assets/img/MainInfo_01.jpg);
+}
+.MainInfo .itm02 {
+    background-image: url(../../public/assets/img/MainInfo_02.jpg);
+}
+.MainInfo .itm03 {
+    background-image: url(../../public/assets/img/MainInfo_03.jpg);
+}
+.MainInfo .itm04 {
+    background-image: url(../../public/assets/img/MainInfo_04.jpg);
+}
+.MainInfo .itm05 {
+    background-image: url(../../public/assets/img/MainInfo_05.jpg);
+}
+
+
+//MainPerFormance 
+
+.MainPerformance  {
+
+    .MainPerformance_Slider {
+    
+
+
+        .MPF_bt {
+            padding: 30px 0;
+            width: 374px;
+            text-align: left;
+
+            .MPF_tit {
+                color: #907e72;
+                font-size: 15px;
+                font-weight: 600;
+                line-height: 1.6;
+            }
+    
+            .MPF_address {
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 1.6;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                overflow: hidden;
+            }
+        }
+    }
+}
+
+.MainPerformance  figure {
+    width: 374px;
+    height: 275px;
+    // object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.MainPerformance .mpf01 {
+    background-image: url(../../public/assets/img/MPFLIST_01.jpg);
+}
+.MainPerformance .mpf02 {
+    background-image: url(../../public/assets/img/MPFLIST_02.jpg);
+}
+.MainPerformance .mpf03 {
+    background-image: url(../../public/assets/img/MPFLIST_03.jpg);
+}
+.MainPerformance .mpf04 {
+    background-image: url(../../public/assets/img/MPFLIST_04.jpg);
+}
+.MainPerformance .mpf05 {
+    background-image: url(../../public/assets/img/MPFLIST_05.jpg);
+}
+.MainPerformance .mpf06 {
+    background-image: url(../../public/assets/img/MPFLIST_06.jpg);
+}
+.MainPerformance .mpf07 {
+    background-image: url(../../public/assets/img/MPFLIST_07.jpg);
+}
+
+
+    
