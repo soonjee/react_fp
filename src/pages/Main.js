@@ -8,9 +8,9 @@ import MainBanner from './MainBanner';
 const Main = () => {
     return (
         <main className='Main'>
-            <MainVisual/>
+            <MainVisual />
             <MainBusiness />
-            <MainInfo/>
+            <MainInfo />
             <MainPerformance />
             <MainBanner />
         </main>

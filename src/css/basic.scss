@@ -55,15 +55,15 @@ $font-big : 24px;
     color: $color-tit;
     background: $color-white;
     border-bottom: 1px solid #e4e4e4;
-}
 
-.Header:hover .container {
-    // color: $color-tit;
-    // border-bottom: 1px solid #e4e4e4;
-}
+    .Header:hover .container {
+        // color: $color-tit;
+        // border-bottom: 1px solid #e4e4e4;
+    }
 
-.Header:hover .logo {
-    background: url(../../public/assets/img/logo02.png);
+    .Header:hover .logo {
+        background: url(../../public/assets/img/logo02.png);
+    }
 }
 
 .tit {
@@ -81,5 +81,4 @@ $font-big : 24px;
     font-size: 17px;
     text-align: center;
     color: #666;
-    margin-bottom: 60px;
 }

@@ -10,7 +10,6 @@ const Header = () => {
     const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
     const [ScrollActive, setScrollActive] = useState(false);
     function handleScroll() {
-        { console.log(ScrollY) }
         if (ScrollY > 500) {
             setScrollY(window.pageYOffset);
             setScrollActive(true);
@@ -32,9 +31,10 @@ const Header = () => {
     return (
         <header className={ScrollActive ? "Header fixed" : "Header"}>
             <div className="container">
-                <Link to="/adm">
+                <Link to="/">
                     <h1 className='logo'></h1>
-                </Link><nav>
+                </Link>
+                <nav>
                     <Navmenu />
                 </nav>
                 <i className='xi-bars'></i>

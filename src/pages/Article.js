@@ -1,10 +1,10 @@
 import React from 'react';
 import { IoMdHome } from "react-icons/io";
 
-const Article = ({ content, num, }) => {
+const Article = ({ content, num }) => {
     return (
         <div className='Article'>
-            <div className="container">
+            {/* <div className="container">
                 <div className="sub_t">
                     <p className='sub_atc_sub'>{content[num].subt}</p>
                     <h2 className='sub_atc_tit'>{content[num].tit}</h2>
@@ -16,10 +16,10 @@ const Article = ({ content, num, }) => {
                         <li className='suv_nav_03'>{content[num].tit}</li>
                     </ul>
                 </div>
-            </div>
+            </div> */}
+            {console.log(num)}
         </div >
     )
 }
-
 
 export default Article

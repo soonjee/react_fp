@@ -52,8 +52,6 @@ const SB = [
   },
 ]
 
-
-
 const App = () => {
   return (
     <Wrapper>

@@ -15,7 +15,7 @@ const Footer = () => {
                     </div>
                     <div div className='privacy_family'>
                         <form>
-                            <select id="goto_familiy_site" name="select" onchange="window.open(value,'_blank');">
+                            <select id="goto_familiy_site" name="select" onChange="window.open(value,'_blank');">
                                 <option value="FAMILY SITE">FAMILY SITE</option>
                                 <option value="http://www.seasidearden.com/">씨사이드아덴</option>
                                 <option value="https://www.stjohns.co.kr/">세인트존스호텔</option>

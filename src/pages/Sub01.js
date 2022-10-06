@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import Article from './Article';
 import '../css/Subpage.scss';
 import '../css/SubInner01.scss';
