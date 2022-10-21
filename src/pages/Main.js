@@ -3,7 +3,6 @@ import MainVisual from './MainVisual';
 import MainBusiness from './MainBusiness';
 import MainInfo from './MainInfo';
 import MainPerformance from './MainPerformance';
-import MainBanner from './MainBanner';
 
 const Main = () => {
     return (
@@ -12,7 +11,6 @@ const Main = () => {
             <MainBusiness />
             <MainInfo />
             <MainPerformance />
-            <MainBanner />
         </main>
     )
 }

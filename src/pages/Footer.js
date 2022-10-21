@@ -4,7 +4,7 @@ import '../css/Footer.scss';
 const Footer = () => {
     return (
         <footer className='Footer'>
-            <div className='container'>
+            <div className='inner'>
                 <div className="ft_top">
                     <div className='privacy_list'>
                         <ul>
@@ -13,13 +13,15 @@ const Footer = () => {
                             <li><a href="/">찾아오시는길</a></li>
                         </ul>
                     </div>
-                    <div div className='privacy_family'>
+                    <div className='privacy_family'>
                         <form>
-                            <select id="goto_familiy_site" name="select" onChange="window.open(value,'_blank');">
-                                <option value="FAMILY SITE">FAMILY SITE</option>
-                                <option value="http://www.seasidearden.com/">씨사이드아덴</option>
-                                <option value="https://www.stjohns.co.kr/">세인트존스호텔</option>
-                            </select>
+                            <div className='family_select'>
+                                <select id="goto_familiy_site" name="goto_familiy_site" onChange="window.open(value,'_blank');">
+                                    <option value="">FAMILY SITE</option>
+                                    <option value="http://www.seasidearden.com/">씨사이드아덴</option>
+                                    <option value="https://www.stjohns.co.kr/">세인트존스호텔</option>
+                                </select>
+                            </div>
                         </form>
                     </div>
                 </div>
@@ -30,7 +32,7 @@ const Footer = () => {
                     <div className="ft_add">
                         <dl>
                             <dd>ADDRESS
-                                <dt>(06606)서울특별시 서초구 서초대로 301,6층(서초동,동익성봉빌딩)</dt>
+                                <dt>(06606)서울특별시 서초구 서초대로 301, 6층(서초동,동익성봉빌딩)</dt>
                             </dd>
                             <dd>
                                 TEL
@@ -41,7 +43,7 @@ const Footer = () => {
                                 <dt>02&#41;783-7922</dt>
                             </dd>
                         </dl>
-                        <p className='ft_copy'>&copy;Copyright ⓒ 2020 Seohai Construction. All Rights Reserved</p>
+                        <p className='ft_copy'>Copyright ⓒ 2020 Seohai Construction. All Rights Reserved</p>
                     </div>
                 </div>
             </div>

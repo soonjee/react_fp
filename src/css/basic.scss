@@ -6,9 +6,7 @@ $font-small : 16px;
 $font-midume : 18px;
 $font-big : 24px;
 
-* {
-    outline: 1px solid #--f00;
-}
+* { // outline: 1px solid #f00; }
 
 .Header {
     position: fixed;
@@ -21,7 +19,10 @@ $font-big : 24px;
         color: $color-tit;
         border-bottom: 1px solid #e4e4e4;
         background: $color-white;
-        // transition: 0.2s;
+
+        .logo {
+            background: url(../../public/assets/img/logo02.png);
+        }
     }
 
     .container {
@@ -56,29 +57,7 @@ $font-big : 24px;
     background: $color-white;
     border-bottom: 1px solid #e4e4e4;
 
-    .Header:hover .container {
-        // color: $color-tit;
-        // border-bottom: 1px solid #e4e4e4;
-    }
-
-    .Header:hover .logo {
+    .logo {
         background: url(../../public/assets/img/logo02.png);
-    }
-}
-
-.tit {
-    display: inline-block;
-    font-size: 40px;
-    font-weight: 500;
-    text-align: center;
-    line-height: 1.4;
-    font-size: $color-tit;
-    border-bottom: 1px solid #222;
-    margin-bottom: 30px;
-}
-
-.sub {
-    font-size: 17px;
-    text-align: center;
-    color: #666;
-}
+    }   
+}}

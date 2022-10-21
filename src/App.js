@@ -13,45 +13,6 @@ import Footer from './pages/Footer';
 import './css/basic.scss';
 import './css/Main.scss';
 
-const SB = [
-  {
-    id: 1,
-    tit: "대표 인사말",
-    gnb: "회사소개",
-    link: "/",
-  },
-  {
-    id: 2,
-    tit: "사업소개",
-    gnb: "사업영역",
-    link: "/",
-  },
-  {
-    id: 3,
-    tit: "대표 인사말",
-    gnb: "회사소개",
-    link: "/",
-  },
-  {
-    id: 4,
-    tit: "대표 인사말",
-    gnb: "회사소개",
-    link: "/",
-  },
-  {
-    id: 5,
-    tit: "대표 인사말",
-    gnb: "회사소개",
-    link: "/",
-  },
-  {
-    id: 6,
-    tit: "대표 인사말",
-    gnb: "회사소개",
-    link: "/",
-  },
-]
-
 const App = () => {
   return (
     <Wrapper>
