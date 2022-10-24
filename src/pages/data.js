@@ -8,6 +8,16 @@ const NL = [
     { id: 6, content: "인재채용", link: "/sub06" },
 ]
 
+// Article 
+const ATC = [
+    { id: 1, tit: "대표 인사말", gnb: "회사소개", link: "/", },
+    { id: 2, tit: "사업소개", gnb: "사업영역", link: "/", },
+    { id: 3, tit: "브랜드소개", gnb: "홍보센터", link: "/", },
+    { id: 4, tit: "비전", gnb: "윤리 및 지속가능경영", link: "/", },
+    { id: 5, tit: "현장조회", gnb: "고객지원", link: "/", },
+    { id: 6, tit: "인재상", gnb: "인재채용", link: "/", },
+] 
+
 // 메인 - MainVisual
 const SLIDE = [
     { id: 1, title: "HOUSING", des: "삶의 안락함과 여유를 갖춘 진정한 보금자리" },
@@ -47,13 +57,4 @@ const MPFLIST = [
     {id: 8, tit: "건축 분야", address:"동춘2구역 도시개발사업구역 내 4블럭",link:"/" },
 ]
 
-const SB = [
-    { id: 1, tit: "대표 인사말", gnb: "회사소개", link: "/", },
-    { id: 2, tit: "사업소개", gnb: "사업영역", link: "/", },
-    { id: 3, tit: "대표 인사말", gnb: "회사소개", link: "/", },
-    { id: 4, tit: "대표 인사말", gnb: "회사소개", link: "/", },
-    { id: 5, tit: "대표 인사말", gnb: "회사소개", link: "/", },
-    { id: 6, tit: "대표 인사말", gnb: "회사소개", link: "/", },
-] 
-
-export { NL, SLIDE, BUSINESS, SDLIST, MPFLIST, SB }
+export { NL, SLIDE, BUSINESS, SDLIST, MPFLIST, ATC }

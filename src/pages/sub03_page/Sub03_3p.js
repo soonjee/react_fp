@@ -1,10 +1,8 @@
 import React, { useEffect } from 'react'
 import Article from './Article';
-// import Sub03_2p from './sub03_page/Sub03_2p';
 import '../css/Subpage.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { Link } from 'react-router-dom';
 
 const Sub03 = ({ content }) => {
     const num = 2;
@@ -12,18 +10,17 @@ const Sub03 = ({ content }) => {
         AOS.init();
     }, [])
     return (
-        //홍보센터
         <div className='Subpage'>
             <div className="itm03 itm">
                 <Article content={content} num={num} />
             </div>
             <div className='SubInner'>
                 <div className='tab_nav'>
-                    <li className='active'><Link to='/'>서해그랑블</Link></li>
-                    <li><Link to='/sub03_page/Sub03_2p'>스카이팰리스</Link></li>
-                    <li><Link to='/sub03_page/Sub03_3p'>관계사</Link></li>
+                    <a href="/">서해그랑블</a>
+                    <a href="/">스카이팰리스</a>
+                    <a href="/" className='active'>관계사</a>
                 </div>
-                <div className='sub3tit txcenter '>
+                <div className='sub_top txcenter'>
                     <h3 className='m20'>
                         서해그랑블은 <span className='bluetxt'>아름다운 주거문화</span>를 건설하는<br />
                         신개념 아파트 브랜드 입니다.
@@ -39,7 +36,7 @@ const Sub03 = ({ content }) => {
                     </p>
                 </div>
                 <div className='sub_btm' data-aos="fade-up" data-aos-duration="1500">
-                    <figure className='img_ctn'>
+                    <figure>
                         <img src={process.env.PUBLIC_URL + "/assets/img/sub03_cnt.jpg"} alt="" />
                     </figure>
                 </div>

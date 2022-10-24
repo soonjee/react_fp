@@ -34,7 +34,7 @@ const MainBusiness = () => {
                                 <li className='MB_itm'>
                                     <a className={'MB_box' + (idx === MouseHover ? ' on' : '')}
                                     onMouseOver={()=> setMouseHover(1)}
-                                    onMouseOut={()=>setMouseHover(0)} // 아 모르것다.. 마우스오버 시 슬라이드 바꾸기 ㅗㅗ
+                                    onMouseOut={()=>setMouseHover(0)} 
                                     >
                                         <div className='info_icon'> 
                                             <img src={process.env.PUBLIC_URL + "/assets/img/main_business_icon_0" + business.id + ".png"} alt="" />

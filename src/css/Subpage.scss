@@ -1,3 +1,5 @@
+@use 'basic';
+// * { outline:  1px solid #f00; }
 .Subpage {
     .itm {
         position: relative;
@@ -33,14 +35,20 @@
 
     .Article {
         .container {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
             padding-top: 200px;
+            align-items: center;
+            line-height: 1.4;
+            letter-spacing: -0.04em;
             color: #fff;
 
             .sub_t {
                 margin-bottom: 50px;
 
                 .sub_atc_sub {
-                    font-size: 16;
+                    font-size: 16px;
                     font-weight: 300;
                     opacity: 0.5;
                     margin-bottom: 20px;
@@ -57,7 +65,8 @@
                 ul {
                     display: flex;
                     justify-content: flex-end;
-                    text-align: center;
+                    // text-align: center;
+                    align-items: center;
                     gap: 20px;
 
                     li~li::before {
@@ -79,10 +88,185 @@
 
                     .suv_nav_03 {
                         font-size: 20px;
-                        padding: 0 0 10px 0;
+                        line-height: 16px;
+                        // padding: 0 0 10px 0;
                         // border-bottom: 2px solid #fff;
                     }
                 }
+            }
+        }
+    }
+
+    .SubInner {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 100px 0;
+        align-items: center;
+        line-height: 1.4;
+        letter-spacing: -0.04em;
+
+        // h태그 margin
+        .m3070 { margin: 30px 0 70px;}
+        .m20 { margin-bottom: 20px; }
+        
+        h3 {
+            font-size: 43px;
+            font-weight: 500;
+            color: #000;
+    
+            .bluetxt {
+                display: inline-block;
+                color: basic.$main-color;
+            }
+        }
+    
+        p {
+            font-size: 18px;
+            color: basic.$color-sub;
+    
+            strong {
+                font-weight: 500;
+                line-height: 1.4;
+                color: basic.$color-tit;
+            }
+        }
+        .tab_nav{
+            display: flex;
+            border: 1px solid #ddd;
+            .active {
+                background: basic.$main-color;
+                color: basic.$color-white;
+                box-shadow: 0 10px 20px rgb(0 0 0 / 15%);
+            }
+        }
+        .tab_nav li {
+            display: block;
+            width: 33.33%;
+            height: 60px;
+            line-height: 60px;
+            text-align: center;
+            font-size: 19px;
+            background: #fff;
+            border-right: 1px solid #ddd;
+        }
+        a:last-child {  border-right: 0; }
+    }
+    .sub_top {
+        margin: 30px 0 70px 0;
+    }
+    .sub_btm {
+        .img_ctn { margin-bottom: 100px;}
+    }
+    .txcenter {
+        text-align: center;
+    }
+    .sub3tit { margin: 80px 0 70px ;}
+    .BgInner {
+        background: #f5f5f5;
+
+        .motto {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 100px 0;
+            align-items: center;
+            line-height: 1.4;
+            letter-spacing: -0.04em;
+
+            h3 {
+                font-size: 43px;
+                font-weight: 500;
+                color: #000;
+                margin-bottom: 20px;
+            }
+
+            ul {
+                display:  flex;
+                justify-content: space-between;
+                li {
+                    width: 32%;
+                    padding: 70px 20px;
+                    text-align: center;
+                    border: 1px solid #ddd;
+                    background: basic.$color-white;
+                    .motto_des {
+                        margin-top: 20px;
+                        font-weight: 600;
+                        .bluetxt {
+                            display: inline-block;
+                            color: basic.$main-color;
+                        }
+                    }
+                }
+            }
+            
+        } 
+        .Tal {
+            max-width: 1200px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 100px 0;
+
+            .brd_ul {
+                display:  flex;
+                justify-content: space-between;
+                .brd_list {
+                    width: 33.33%;
+                    max-width: 300px;
+                    text-align: center;
+                    .motto_icon {
+                        position: relative;
+                        width: 90%;
+                        height: 0;
+                        margin: 0 auto;
+                        padding-bottom: 90%;
+                        border-radius: 50%;
+                        background: #fff;
+
+                        &::before {
+                            content: '';
+                            width: calc(100% - 22px);
+                            height: calc(100% - 22px);
+                            border: 1px dashed #ddd;
+                            position: absolute;
+                            left: 10px;
+                            top: 10px;
+                            border-radius: 50%;
+                        }
+
+                        img {
+                            margin-top: 20%;
+                        }
+                        .tal_des {
+                            display: block;
+                            color: #000;
+                            font-weight: 500;
+                            font-size: 23px;
+                            margin-top: 10px;
+                        }
+                    }
+                    .brd_des {
+                        padding: 20px;
+                        font-size: 16px;
+                        line-height: 20px;
+                        font-weight: 400;
+                        color: #666;
+                        &::before {
+                            content: '';
+                            width: 10px;
+                            height: 40px;
+                            display: block;
+                            margin: 0 auto 20px;
+                            background: url(../../public/assets/img/tal_dot.png) no-repeat 0 0;
+                        }
+                        .bluetxt {
+                            display: inline-block;
+                            color: basic.$main-color;
+                        }
+                    }
+                }
+                
             }
         }
     }

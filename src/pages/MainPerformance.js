@@ -1,13 +1,16 @@
 import React from 'react'
 import { useState, useEffect, useRef } from 'react';
+import { MPFLIST } from './data';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
-import { MPFLIST } from './data';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const MainPerformance = () => {
     const [IDX, setIDX] = useState();
     useEffect(() => {
-        setIDX(0)
+        setIDX(0);
+        AOS.init();
     }, []);
     const mpfSlide = useRef(null);
     const setting = {
@@ -24,7 +27,7 @@ return (
         <div className='inner'>
                 <h2 className='tit'>사업실적</h2>
                 <p className='sub'>고객의 최대 감동을 위해 최선의 노력을 다하겠습니다.</p>
-                <div className='MainPerformance_Slider'>
+                <div className='MainPerformance_Slider' data-aos="fade-up" data-aos-duration="1500">
                     <ul>
                         <Slider {...setting}
                         ref={mpfSlide}
@@ -36,8 +39,10 @@ return (
                                 MPFLIST.map((mpflist, idx) => {
                                     return (
                                         <li>
-                                            <figure key={mpflist.id} className={'mpf0' + (mpflist.id + (idx === IDX ? ' on' : ''))}>
-                                            </figure>
+                                            <div className='MPF_top'>
+                                                <figure key={mpflist.id} className={'mpf0' + (mpflist.id + (idx === IDX ? ' on' : ''))}>
+                                                </figure>
+                                            </div>
                                             <div className='MPF_bt'>
                                                 <p className='MPF_tit'>{mpflist.tit}</p>
                                                 <p className='MPF_address'>{mpflist.address}</p>

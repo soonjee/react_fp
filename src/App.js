@@ -10,21 +10,25 @@ import Sub04 from './pages/Sub04';
 import Sub05 from './pages/Sub05';
 import Sub06 from './pages/Sub06';
 import Footer from './pages/Footer';
+import Sub03_2p from './pages/sub03_page/Sub03_2p';
+import {ATC} from './pages/data'
 import './css/basic.scss';
 import './css/Main.scss';
 
 const App = () => {
   return (
     <Wrapper>
+      {console.log(ATC)}
       <Header />
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='/Sub01' element={<Sub01 />} />
-        <Route path='/Sub02' element={<Sub02 />} />
-        <Route path='/Sub03' element={<Sub03 />} />
-        <Route path='/Sub04' element={<Sub04 />} />
-        <Route path='/Sub05' element={<Sub05 />} />
-        <Route path='/Sub06' element={<Sub06 />} />
+        <Route path='/Sub01' element={<Sub01 content={ATC}/>} />
+        <Route path='/Sub02' element={<Sub02 content={ATC}/>} />
+        <Route path='/Sub03' element={<Sub03 />}/>
+        <Route path='/sub03_page/Sub03_2p' element={<Sub03_2p />} content={ATC}/>
+        <Route path='/Sub04' element={<Sub04 content={ATC}/>}/>
+        <Route path='/Sub05' element={<Sub05 content={ATC}/>}/>
+        <Route path='/Sub06' element={<Sub06 content={ATC}/>}/>
       </Routes>
       <Footer />
     </Wrapper>

@@ -3,13 +3,16 @@ import { useState, useEffect, useRef } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import { SDLIST } from './data';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 // import styled from 'styled-components';
 
 
 const MainInfo = () => {
     const [IDX, setIDX] = useState();
     useEffect(() => {
-        setIDX(0)
+        setIDX(0);
+        AOS.init();
     }, []);
     const InfoSlide = useRef(null);
     const setting = {
@@ -35,11 +38,11 @@ const MainInfo = () => {
                             {
                                 SDLIST.map((sdlist, idx) => {
                                     return (
-                                        <li>
+                                        <li data-aos="fade-up" data-aos-duration="1500">
                                             <a className='MI_box'>
                                                 <div className='MI_top'>
                                                     <figure key={sdlist.id} className={'infoitm0' + (sdlist.id + (idx === IDX ? ' on' : ''))}>
-                                                        <p className='MI_state'>{sdlist.state}</p>
+                                                        <p className={`MI_state ${sdlist.state==='분양중' ? "on" : ""}`}>{sdlist.state}</p>
                                                     </figure>
                                                 </div>
                                                 <div className='MI_bt'>

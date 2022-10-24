@@ -1,22 +1,23 @@
 import { useEffect } from 'react';
 import Article from './Article';
 import '../css/Subpage.scss';
-import '../css/SubInner01.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const Sub01 = ({ content }) => {
     const num = 0;
+    console.log(content)
     useEffect(() => {
         AOS.init();
     }, [])
     return (
+        //회사소개
         <div className='Subpage'>
             <div className="itm01 itm">
                 <Article content={content} num={num} />
             </div>
             <div className="SubInner" data-aos="fade-up" data-aos-duration="1500">
-                <h3>
+                <h3 className='m3070'>
                     친환경 녹색 아파트와 새로운 주거 트렌드를 통해<br />
                     <span className='bluetxt'>미래형 아파트</span>의 기준을 세워왔습니다.
                 </h3>
