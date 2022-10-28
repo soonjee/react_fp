@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
-import Article from './Article';
-import '../css/Subpage.scss';
+import Article from '../Article';
+import '../../css/Subpage.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Sub03 = ({ content }) => {
     const num = 2;
@@ -16,11 +17,11 @@ const Sub03 = ({ content }) => {
             </div>
             <div className='SubInner'>
                 <div className='tab_nav'>
-                    <a href="/">서해그랑블</a>
-                    <a href="/">스카이팰리스</a>
-                    <a href="/" className='active'>관계사</a>
+                    <li><Link to='/Sub03'>서해그랑블</Link></li>
+                    <li><Link to='/sub03_page/Sub03_2p'>스카이팰리스</Link></li>
+                    <li className='active'><Link to='/sub03_page/Sub03_3p'>관계사</Link></li>
                 </div>
-                <div className='sub_top txcenter'>
+                <div className='sub3tit txcenter'>
                     <h3 className='m20'>
                         서해그랑블은 <span className='bluetxt'>아름다운 주거문화</span>를 건설하는<br />
                         신개념 아파트 브랜드 입니다.

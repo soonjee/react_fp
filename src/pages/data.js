@@ -4,7 +4,7 @@ const NL = [
     { id: 2, content: "사업영역", link: "/sub02" },
     { id: 3, content: "홍보센터", link: "/sub03" },
     { id: 4, content: "윤리 및 지속가능경영", link: "/sub04" },
-    { id: 5, content: "현장 조회", link: "/sub05" },
+    { id: 5, content: "고객지원", link: "/sub05" },
     { id: 6, content: "인재채용", link: "/sub06" },
 ]
 
@@ -14,7 +14,7 @@ const ATC = [
     { id: 2, tit: "사업소개", gnb: "사업영역", link: "/", },
     { id: 3, tit: "브랜드소개", gnb: "홍보센터", link: "/", },
     { id: 4, tit: "비전", gnb: "윤리 및 지속가능경영", link: "/", },
-    { id: 5, tit: "현장조회", gnb: "고객지원", link: "/", },
+    { id: 5, tit: "하자접수(C/S)", gnb: "고객지원", link: "/", },
     { id: 6, tit: "인재상", gnb: "인재채용", link: "/", },
 ] 
 

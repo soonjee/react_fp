@@ -3,6 +3,7 @@ import Article from '../Article';
 import '../../css/Subpage.scss';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import { Link } from 'react-router-dom';
 
 const Sub03_2p = ({ content }) => {
     const num = 2;
@@ -16,11 +17,11 @@ const Sub03_2p = ({ content }) => {
             </div>
             <div className='SubInner'>
                 <div className='tab_nav'>
-                    <a href="/">서해그랑블</a>
-                    <a href="/" className='active'>스카이팰리스</a>
-                    <a href="/">관계사</a>
+                    <li><Link to='/Sub03'>서해그랑블</Link></li>
+                    <li className='active'><Link to='/sub03_page/Sub03_2p'>스카이팰리스</Link></li>
+                    <li><Link to='/sub03_page/Sub03_3p'>관계사</Link></li>
                 </div>
-                <div className='sub_top txcenter'>
+                <div className='sub3tit txcenter'>
                     <h3 className='m20'>
                         스카이팰리스는 <span className='bluetxt'>삶을 아름다운 작품</span>으로<br />
                         만들어 드릴 하이엔드 브랜드 입니다.

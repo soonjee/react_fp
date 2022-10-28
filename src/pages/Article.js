@@ -11,9 +11,9 @@ const Article = ({ content, num }) => {
                 </div>
                 <div className="sub_nav">
                     <ul>
-                        <li className='suv_nav_01'><a href=""><IoMdHome /></a></li>
-                        <li className='suv_nav_02'><a href="">{content[num].gnb}</a></li>
-                        <li className='suv_nav_03'>{content[num].tit}</li>
+                        <li><a href=""><IoMdHome /></a></li>
+                        <li><a href="">{content[num].gnb}</a></li>
+                        <li>{content[num].tit}</li>
                     </ul>
                 </div>
             </div>

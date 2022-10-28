@@ -10,8 +10,8 @@ const Header = () => {
     const [ScrollY, setScrollY] = useState(0); // window 의 pageYOffset값을 저장
     const [ScrollActive, setScrollActive] = useState(false);
     function handleScroll() {
-        {console.log(ScrollY)}
-        if (ScrollY > 350) {
+        // {console.log(ScrollY)}
+        if (ScrollY > 100) {
             setScrollY(window.pageYOffset);
             setScrollActive(true);
         } else {

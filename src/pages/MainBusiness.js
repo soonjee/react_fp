@@ -6,7 +6,6 @@ import { BUSINESS } from './data';
 
 const MainBusiness = () => {
     const [HV, setHv] = useState()
-    const [MouseHover, setMouseHover] = useState(0);
     useEffect(() => {
         setHv(0)
     }, []);
@@ -32,10 +31,7 @@ const MainBusiness = () => {
                         { BUSINESS.map((business, idx) => {
                             return (
                                 <li className='MB_itm'>
-                                    <a className={'MB_box' + (idx === MouseHover ? ' on' : '')}
-                                    onMouseOver={()=> setMouseHover(1)}
-                                    onMouseOut={()=>setMouseHover(0)} 
-                                    >
+                                    <a className='MB_box'>
                                         <div className='info_icon'> 
                                             <img src={process.env.PUBLIC_URL + "/assets/img/main_business_icon_0" + business.id + ".png"} alt="" />
                                         </div>

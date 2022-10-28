@@ -211,7 +211,9 @@ button {
         // max-height: 500px;
         // height: 100%;
         .MB_bg_wrap {
-            figure {height: 500px;} 
+            figure {
+                height: 500px;
+            } 
             .mb_bg00 {background: url(../../public/assets/img/business_bg_00.png) no-repeat center center/cover;}
             .mb_bg01 {background: url(../../public/assets/img/business_bg_01.png) no-repeat center center/cover;}
             .mb_bg02 {background: url(../../public/assets/img/business_bg_02.png) no-repeat center center/cover;}
