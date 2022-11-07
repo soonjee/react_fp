@@ -2,9 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import '../css/Main.scss';
-import {SLIDE} from './data';
-
-// 2022. 10. 21
+import {SLIDE, BUSINESS} from './data';
 
 const MainVisual = () => {
     const [IDX, setIDX] = useState();
@@ -14,14 +12,13 @@ const MainVisual = () => {
     const mainSlide = useRef(null);
     const setting = {
         infinite: true,
-        autoplay: true,
+        autoplay: false,
         autoplaySpeed: 3000,
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
         afterChange: index => setIDX(index),
-        // dots: true,
-        // dotsClass: 'dots_wrap',
+        dots: false,
         arrows: false,
     }
     return (
@@ -30,6 +27,7 @@ const MainVisual = () => {
                 <div className='MV_slide'>
                     <Slider {...setting}
                     ref={mainSlide}
+                    // dotsClass='dots_wrap'
                     >
                         {
                             SLIDE.map((slide, idx) => {
@@ -56,22 +54,21 @@ const MainVisual = () => {
                         /
                         <span className='num-total'>0{SLIDE.length}</span>
                     </div>
-                    {/* <ul className='dots_wrap slick-dots'>
-                        <li>
-                            <strong className='dots_tit'>건축분야</strong>
-                            <span className='dots_sub'>Housing Works</span>
-                            <div className='process'>
-                                <span className='bar'></span>
-                            </div>
-                        </li>
-                        <li>
-                            <strong className='dots_tit'>건축분야</strong>
-                            <span className='dots_sub'>Housing Works</span>
-                            <div className='process'>
-                                <span className='bar'></span>
-                            </div>
-                        </li>
-                    </ul> */}
+                    <ul className='custom_dots'>
+                            {
+                                BUSINESS.map((business, idx)=> {
+                                    return (
+                                        <li key={business.id} className={(idx === IDX ? 'slick-active bar__start' : '')}>
+                                            <strong>{business.Field}</strong>
+                                            <span>{business.sub}</span>
+                                            <div className='progress'>
+                                                <span className='bar'></span>
+                                            </div>
+                                        </li>
+                                    )
+                                })
+                            }
+                        </ul>
                 </div>
             </div>
             

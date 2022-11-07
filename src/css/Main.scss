@@ -5,7 +5,7 @@ $color-white : #fff;
 $font-small : 16px;
 $font-midume : 18px;
 $font-big : 24px;
-
+* { outline: 1px solid #--f00}
 //공통
 .inner {
     width: 100%;
@@ -49,35 +49,50 @@ button {
 
     .MainVisual {
         position: relative;
-        // .dots_wrap {
-            
-        //     li {
-        //         display: inline-block;
-        //         width: calc(100%/4);
-        //         background: #333;
-        //         font-size: 0;
-        //         margin-right: 30px;
+        .dots_wrap { 
+                // position:absolute;
+                // bottom:10%;
+                // right: 50px;
+                // width: calc(100% - 320px);
+                // align-items: center;
+                // font-size: 0;
+                // text-align:center;
 
-        //         button {
-        //             height: 10px;
-        //         }
-        //     }
-        //     li.slick-active {
-        //         width: 100%;
-        //         transition: width 5s;
-        //         background: #ddd;
-        //     }
-        // }
-
+                // li {
+                //     width: calc(100%/4);
+                //     height: 5px;
+                //     display: inline-block;
+                    
+                //     background-color: rgba(255, 255, 255, 0.2);
+                    
+                //     &::before {
+                //         content: "";
+                //         position: absolute;
+                //         top: 0;
+                //         left: 0;
+                //         width: 0;
+                //         height: 100%;
+                //         background: #f00;
+                //     }
+                // }
+                // li.slick-active {
+                //     // width:100%;
+                //     // transition:4s;
+                // }
+        }
         .MV_controls {
             position: absolute;
             display: flex;
             align-items: center;
-            left: 50px;
-            bottom: 10%;
+            left: 50%;
+            bottom: 50px;
+            transform: translateX(-50%);
+            width: 100%;
+            padding: 0 50px;
 
             // 컨트롤01, arrows
             .arrows_wrap {
+                display: flex;
                 margin-right: 30px;
                 .controls_arrow {
                     width: 40px;
@@ -99,19 +114,68 @@ button {
             //컨트롤02, 슬라이드넘버페이징
             .slideNum_wrap {
                 color: $color-white;
+                margin-right: 50px;
                 .num-current { font-size: 24px; margin-right: 5px; }
                 .num-total { font-size: 20px; margin-left: 5px; }
             }
 
-            //컨트롤03, dots 커스텀 
-            // .slide_dots {
-            //     display:  flex;
+            //컨트롤03, dots 커스텀
+            .custom_dots {
+                display: flex;
+                justify-content: space-between; // 왜 안먹노
+                align-items: center;
+                width: 100%;
+                // width: calc(100% - 380px);
+                right: 5rem;
+                color: $color-white;
+
+                .slick-active { padding:  10px 0;}
+                li.slick-active {
+                    strong {
+                        font-weight: 700;
+                        opacity: 1;
+                    }
+                    
+                    .progress {
+                        opacity: 1;
+                        .bar {
+                            display: block;
+                            height: 100%;
+                            background: #fff;
+                        }
+                    }
+                }
+                // li.bar__start .bar {
+                //     width: 100%;
+                //     transition: width 5s;
+                // }
                 
-            //     .slide_dots li.slick-active button {
-            //         width: 100%;
-            //         background-color: $color-white;
-            //     }
-            // }
+                li {
+                    width: calc(100%/4);
+                    margin-right: 27px;
+                    
+
+                    strong {
+                        font-size: 16px;
+                        color: $color-white;
+                        margin-right: 10px;
+                        opacity: 0.7;
+                    }
+                    span { font-size: 14px; color: $color-sub; }
+
+                    .progress {
+                        width: 100%;
+                        height: 2px;
+                        margin-top: 1rem;
+                        background-color: rgba(255, 255, 255, 0.2);
+                        opacity: 0.7;
+                    }
+                    
+                }
+                
+
+                
+            }
         }
     }
 }

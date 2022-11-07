@@ -6,6 +6,7 @@ import { BUSINESS } from './data';
 
 const MainBusiness = () => {
     const [HV, setHv] = useState()
+    const [isListHover, setIsListHover] = useState(false);
     useEffect(() => {
         setHv(0)
     }, []);
@@ -30,8 +31,10 @@ const MainBusiness = () => {
                     <ul className='MB_list'>
                         { BUSINESS.map((business, idx) => {
                             return (
-                                <li className='MB_itm'>
-                                    <a className='MB_box'>
+                                <li className='MB_itm'
+                                    onMouseOver={() => setIsListHover(true)}
+                                    onMouseOut={() => setIsListHover(false)}>
+                                    <a>
                                         <div className='info_icon'> 
                                             <img src={process.env.PUBLIC_URL + "/assets/img/main_business_icon_0" + business.id + ".png"} alt="" />
                                         </div>
