@@ -122,34 +122,12 @@ button {
             //컨트롤03, dots 커스텀
             .custom_dots {
                 display: flex;
-                justify-content: space-between; // 왜 안먹노
+                justify-content: space-between; // 왜 안먹냐
                 align-items: center;
                 width: 100%;
-                // width: calc(100% - 380px);
                 right: 5rem;
                 color: $color-white;
 
-                .slick-active { padding:  10px 0;}
-                li.slick-active {
-                    strong {
-                        font-weight: 700;
-                        opacity: 1;
-                    }
-                    
-                    .progress {
-                        opacity: 1;
-                        .bar {
-                            display: block;
-                            height: 100%;
-                            background: #fff;
-                        }
-                    }
-                }
-                // li.bar__start .bar {
-                //     width: 100%;
-                //     transition: width 5s;
-                // }
-                
                 li {
                     width: calc(100%/4);
                     margin-right: 27px;
@@ -170,11 +148,28 @@ button {
                         background-color: rgba(255, 255, 255, 0.2);
                         opacity: 0.7;
                     }
-                    
                 }
-                
+                // slick-active 활성화
+                li.slick-active {
+                    padding:  10px 0;
 
-                
+                    strong {
+                        font-weight: 700;
+                        opacity: 1;
+                    }
+                    .progress {
+                        opacity: 1;
+                        .bar {
+                            display: block;
+                            height: 100%;
+                            background: #fff;
+                        }
+                    }
+                }
+                // li.slick-active.bar__start .bar {
+                //     width: 100%;
+                //     transition: width 5s;
+                // }
             }
         }
     }
